@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>注册</h1>
+        <form id="register-form">
+            <input type="text" id="register-username" placeholder="用户名" required>
+            <input type="password" id="register-password" placeholder="密码" required>
+            <select id="register-role" required>
+                <option value="student">学生</option>
+                <option value="teacher">老师</option>
+            </select>
+            <div id="student-fields">
+                <input type="text" id="student-name" placeholder="姓名" required>
+                <input type="text" id="student-class" placeholder="班级" required>
+                <input type="text" id="student-major" placeholder="专业" required>
+                <input type="tel" id="student-phone" placeholder="常用手机号" required pattern="^1[3-9]\d{9}$">
+            </div>
+            <div id="teacher-fields" style="display:none;">
+                <input type="text" id="teacher-invite" placeholder="邀请码" required>
+            </div>
+            <button type="submit">注册</button>
+        </form>
+        <button id="to-login-btn" type="button">已有账号？去登录</button>
+        <div id="register-message"></div>
+    </div>
+    <script src="js/register.js"></script>
+</body>
+</html> 
